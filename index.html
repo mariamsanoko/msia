@@ -1,64 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mariam Sanoko - MS French Academy</title>
-  <link rel="stylesheet" href=css/styles.css" />
+  <title>MS D365 French Academy - Deviens Expert(e) en Automatisation Sans Coder</title>
+  <meta name="description" content="Formation certifiante 100% No-Code pour maîtriser Microsoft Power Platform, D365 et Copilot. Accessible à tous, même sans coder.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* Corrections : suppression de *.sticky-menu */
+    .sticky-menu {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+      padding: 1rem;
+      margin: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
+    }
+    .nav-links a:hover {
+      background-color: #f0f0f0;
+      border-radius: 6px;
+    }
+
+    /* Responsive fix pour stats mobile */
+    @media (max-width: 768px) {
+      .stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header class="sticky-menu">
-  <nav>
+  <!-- Barre de navigation sticky -->
+  <nav class="sticky-menu">
     <ul class="nav-links">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/formations.html">Formations</a></li>
-      <li><a href="/coach-ia.html">Coach IA</a></li>
-      <li><a href="/faq.html">FAQ</a></li>
-      <li><a href="/inscription.html">Inscription</a></li>
+      <li><a href="#problems">Défis</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#pricing">Tarifs</a></li>
     </ul>
   </nav>
-</header>
 
-<main>
-  <!-- Contenu principal ici -->
-  <section style="padding: 4rem; text-align: center;">
-    <h1>Bienvenue sur MS French Academy</h1>
-    <p>Formations, IA No-Code, Coach IA, CRM et plus encore.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Deviens expert(e) en automatisation et CRM sans coder</h1>
+      <p class="subtitle">Grâce à la MS D365 French Academy et la puissance du No-Code</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-number">15+</span><span>Modules</span></div>
+        <div class="stat"><span class="stat-number">40h</span><span>de Formation</span></div>
+        <div class="stat"><span class="stat-number">100%</span><span>Pratique</span></div>
+      </div>
+    </div>
   </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Deviens expert(e) en automatisation et CRM sans coder</h1>
-            <p class="subtitle">Grâce à la MS D365 French Academy et la puissance du No-Code</p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">15+</span>
-                    <span>Modules</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">40h</span>
-                    <span>de Formation</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span>Pratique</span>
-                </div>
-            </div>
+  <!-- Video Section -->
+  <section class="video-container">
+    <div class="container">
+      <h2>Découvre ta formation en 2 minutes</h2>
+      <div style="max-width:800px; margin:auto;">
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/ID_DE_TA_VIDEO" 
+          title="Présentation MS D365 Academy" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p style="margin-top: 20px; color: #666;">Clique pour voir la présentation complète de l'académie</p>
+    </div>
+  </section>
 
-            <div class="accessibility-badge">🌐 Formation Accessible à Tous</div>
-            <div class="accessibility-badge">♿ Compatible Handicaps</div>
-            <div class="accessibility-badge">🎓 Certifiante SCORM</div>
-        </div>
-    </section>
-</main>
+  <!-- Problems Section -->
+  <section class="problems" id="problems">
+    ...
+  </section>
 
-<footer style="text-align:center; padding:2rem; font-size:0.9rem; color:#777">
-  © 2025 Mariam Sanoko - Tous droits réservés.
-</footer>
+  <!-- Solution Section -->
+  <section class="solution" id="solution">
+    ...
+  </section>
 
+  <!-- Modules Section -->
+  <section class="modules" id="modules">
+    ...
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    ...
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    ...
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#222; color:#fff; text-align:center; padding:40px 20px;">
+    <p>© 2025 MS D365 French Academy – Tous droits réservés</p>
+    <p><a href="/cgv" style="color:#aaa;">Conditions Générales de Vente</a> | <a href="/mentions-legales" style="color:#aaa;">Mentions Légales</a></p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function selectPlan(plan) {
+      const plans = {
+        'essentiel': { price: 29, name: 'Accès Essentiel' },
+        'complete': { price: 79, name: 'Formation Complète' },
+        'premium': { price: 199, name: 'Coaching Premium' }
+      };
+      const selectedPlan = plans[plan];
+      if (confirm(`Confirmer l'achat : ${selectedPlan.name} - ${selectedPlan.price}€`)) {
+        window.location.href = `https://buy.stripe.com/ton-lien-stripe?plan=${plan}`;
+      }
+    }
+
+    function scrollToPricing() {
+      document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
