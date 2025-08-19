@@ -7,7 +7,7 @@ export default function ComplexFooter() {
       <footer>
         <div className="row">
           <div className="col-12 col-md-4">
-            <h5 className="mt-5">Astro Ecommerce</h5>
+            <h5 className="mt-5">MS I.A French Academy</h5>
             <p className="text-body text-sm pe-5">The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.</p>
           </div>
           <div className="col-12 col-md-8">
@@ -19,8 +19,8 @@ export default function ComplexFooter() {
               <script>
                 document.write(new Date().getFullYear())
               </script>
-              &nbsp;Astro Ecommerce by &nbsp;
-              <a href="https://www.creative-tim.com" className="text-dark" target="_blank">Creative Tim</a>.
+              &nbsp;MS I.A  Academy by &nbsp;
+              <a href="#" className="text-dark" target="_blank">MS I.A</a>.
             </div>
           </div>
         </div>
