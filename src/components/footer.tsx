@@ -7,13 +7,13 @@ export default function Footer() {
             <div className="copyright text-center text-sm text-muted text-lg-start">
               Copyright ©{" "}
               <script>document.write(new Date().getFullYear())</script>
-              &nbsp;MS I.A French Academy by 
+              &nbsp;Astro Ecommerce by 
               <a
                 href="https://www.creative-tim.com"
                 className="text-dark ms-1"
                 target="_blank"
               >
-                Mariam Sanoko
+                Creative Tim
               </a>
               .
             </div>
