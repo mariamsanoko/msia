@@ -1,4 +1,4 @@
-import { lemonsqueezyApiInstance } from "@/utils/axios";
+import { lemonsqueezyApiInstance } from "../../utils/axios";
 
 export const dynamic = "force-dynamic";
 
@@ -8,7 +8,7 @@ export async function POST(req) {
 
         if (!reqData.productId) 
             return Response.json(
-            { message: "product ID is required" },
+            { message: "productId is required" },
             { status: 400} 
          );     
         
@@ -31,11 +31,12 @@ export async function POST(req) {
             },
         },
     });
-    const checkoutUrl = response.data.dara.attributes.url;
+    const checkoutUrl = response.data.data.attributes.url;
+
     console.log(response.data);
-    return Response.json({ checkoutUrl})
+    return Response.json({ checkoutUrl })
     } catch (error) {
         console.error(error);
-        Response.json({ message: "An rroer occured"}, { status: 500});    
+        Response.json({ message: "An error occured" }, { status: 500});    
     }    
 }
