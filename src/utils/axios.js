@@ -7,6 +7,6 @@ export const lemonsqueezyApiInstance = axios.create({
     headers: {
         Accept: "application/vnd.api+json",
         "Content-Type":"application/vnd.api+json",
-        Authorization:"",
+        Authorization:`Bearer ${process.env.LEMON_SQUEEZY_API_KEY}`,
     },
-    });
+});
