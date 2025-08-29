@@ -1,6 +1,6 @@
-import { lemonSqueezyApiInstance } from "@/utils/axios";
+import { lemonsqueezyApiInstance } from "@/utils/axios";
 
-export const dynamic ="force-dynamic";
+export const dynamic = "force-dynamic";
 
 export async function POST(req) {
     try {
@@ -12,7 +12,7 @@ export async function POST(req) {
             { status: 400} 
          );     
         
-        const response  = await lemonSqueezyApiInstance.post("/checkout", {
+        const response  = await lemonsqueezyApiInstance.post("/checkouts", {
             data: {
                 type: "checkouts",
                 relationships: {
@@ -31,9 +31,9 @@ export async function POST(req) {
             },
         },
     });
-
+    const checkoutUrl = response.data.dara.attributes.url;
     console.log(response.data);
-    
+    return Response.json({ checkoutUrl})
     } catch (error) {
         console.error(error);
         Response.json({ message: "An rroer occured"}, { status: 500});    
