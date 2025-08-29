@@ -12,25 +12,28 @@ export async function POST(req) {
             { status: 400} 
          );     
         
-         const response  = await lemonSqueezyApiInstance.post("/checkout", {
+        const response  = await lemonSqueezyApiInstance.post("/checkout", {
             data: {
                 type: "checkouts",
                 relationships: {
                     store: {
                         data: {
                             type: "stores",
-                            id: "2"
+                            id: process.env.LEMON_SQUEEZY_STORE_ID.toString(),
+                        },
                     },
-                },
-                variant: {
+                    variant: {
                     data: {
                         type: "variants",
-                        id: "2",
+                        id: reqData.productId.toString(),
                     },
                 },
             },
         },
     });
+
+    console.log(response.data);
+    
     } catch (error) {
         console.error(error);
         Response.json({ message: "An rroer occured"}, { status: 500});    
