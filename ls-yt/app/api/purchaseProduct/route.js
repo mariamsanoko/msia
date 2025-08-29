@@ -1,4 +1,5 @@
-import { emonsqueezyApiInstance } from ".@/utils";
+import { lemonsqueezyApiInstance } from "@/utils/axios";
+
 
 export const dynamic = "force-dynamic";
 
