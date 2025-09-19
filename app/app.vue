@@ -1,19 +1,20 @@
+<script setup>
+const user = useSupabaseUser()
+</script>
+
 <template>
   <div>
-    <header class="p-4 bg-gray-900 text-white">
-      <h1>MSIA - Mariam Sanoko Academy</h1>
-    </header>
+    <h1>🚀 MS IA Academmy</h1>
+    <p v-if="user">Bonjour, {{ user.email }}</p>
+    <p v-else>Bienvenue, connecte-toi pour accéder aux formations</p>
 
-    <main>
-      <NuxtPage /> <!-- Ici toutes tes pages Nuxt s’affichent -->
-    </main>
-
-    <footer class="p-4 bg-gray-200 text-center">
-      © 2025 - Mariam Sanoko
-    </footer>
+    <nav>
+      <ul>
+        <li><NuxtLink to="/auth">Auth</NuxtLink></li>
+        <li v-if="user"><NuxtLink to="/formations">Formations</NuxtLink></li>
+        <li v-if="user"><NuxtLink to="/upload">Upload</NuxtLink></li>
+        <li v-if="user"><NuxtLink to="/admin">Admin</NuxtLink></li>
+      </ul>
+    </nav>
   </div>
 </template>
-
-<script setup>
-// Pas besoin de logique ici pour le moment
-</script>
