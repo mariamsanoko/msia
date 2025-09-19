@@ -1,6 +1,6 @@
+/// <reference types="@nuxtjs/supabase" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
-/// <reference types="@nuxtjs/supabase" />
 /// <reference path="types/modules.d.ts" />
 /// <reference path="types/runtime-config.d.ts" />
 /// <reference path="types/app.config.d.ts" />

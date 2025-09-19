@@ -1,10 +1,6 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/supabase"],
-
-  app: {
-    baseURL: "/msia/", // ⚡ Obligatoire pour GitHub Pages
-  },
-
+  
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
